@@ -72,6 +72,11 @@ To run an experiment, simply run `main.py` and supply the path to the respective
 ```bash
 $ python main.py ./exp-in/exp1.json --verbose
 ```
+For experiments using a pre-defined initial mapping, i.e., skipping initial mapping generation with `SabreLayout`, the initial mapping (in QASM format) can be supplied as an additional command line argument, immediately following the JSON configuration file path. For example, to run the validity test of `example_4q` with `example_4q-init` as the initial mapping:
+```bash
+$ python main.py ./example_4q.json ./benchmark/example_4q/example_4q-init.qasm
+```
+Note that the QASM file of the initial mapping must represent the circuit of the **target backend** with the logical circuit mapped onto it, i.e., the qubits defined in the file are those of the quantum device, not the logical circuit. See `display.ipynb` for a visualisation of `example_4q-init` as an example.
 
 ### Customising and defining an experiment
 
