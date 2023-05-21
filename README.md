@@ -77,7 +77,7 @@ $ python main.py ./exp-in/exp1.json --verbose
 
 It is simple to customise, or define a new, experiment: simply edit the respective, or create a new, JSON configuration file as appropriate. Note that:
 
-- All path fields, i.e., `bench_path`, `qasm_path`, and `csv_path`, must be suffixed with `/`.
+- `bench_path` and `qasm_path` must be suffixed with `/`.
 - If `bench_filter` is left blank, i.e., `""`, all circuits in `bench_path` will be run.
 - The value of `ag` must be one of the keys of `ARCHGRAPHS`, found in `util.py`.
 - `reps` must be a non-zero positive integer.
