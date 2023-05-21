@@ -6,7 +6,7 @@ This repository provides the source code and reproducible experiments presented 
 
 Most existing quantum circuit transformation (QCT, or qubit mapping) algorithms prioritise minimising circuit size, potentially overlooking the impact of single-qubit gates on circuit depth. In the past several years, we have seen the size of quantum computer increases [from 5 to 433 qubits](https://newsroom.ibm.com/2022-11-09-IBM-Unveils-400-Qubit-Plus-Quantum-Processor-and-Next-Generation-IBM-Quantum-System-Two), but qubit coherence time in NISQ devices remains very short. This implies that we can only run a very limited number of quantum operations on each qubit; in other words, we cannot extract meaningful information from very deep quantum circuits on NISQ devices. Thus, minimising the depth of transformed circuits is perhaps a more important objective.
 
-SQGM (Single-Qubit Gates Matter) promises a simple and effective method that takes into account the impact of single-qubit gates on circuit depth. Our method can be integrated with existing QCT algorithms. In this source code, we demonstrate the effectiveness of SQGM by embedding it in Qiskit's  [`SabreSwap` module](https://qiskit.org/documentation/stubs/qiskit.transpiler.passes.SabreSwap.html), which is an implementation of the state-of-the-art [SABRE (SWAP-based Bidirectional Heuristic Search Algorithm)](https://dl.acm.org/doi/abs/10.1145/3297858.3304023).
+SQGM (Single-Qubit Gates Matter) promises a simple and effective method that takes into account the impact of single-qubit gates on circuit depth. Our method can be integrated with existing QCT algorithms. In this source code, we demonstrate the effectiveness of SQGM by embedding it in Qiskit's  `SabreSwap` [module](https://qiskit.org/documentation/stubs/qiskit.transpiler.passes.SabreSwap.html), which is an implementation of the state-of-the-art [SABRE (SWAP-based Bidirectional Heuristic Search Algorithm)](https://dl.acm.org/doi/abs/10.1145/3297858.3304023).
 
 ## Installation
 
@@ -25,7 +25,7 @@ Note that Google Sycamore was originally designed with 54 qubits, but ended up w
 
 ## Mappers and routers
 
-All experiments conducted used Qiskit 0.39.4's `SabreLayout` module to generate initial mappings. Nonetheless, `/mapper` provides the Qiskit 0.33.0's `SabreLayout` module for reference and use, if needed.
+All experiments conducted used Qiskit 0.39.4's `SabreLayout` [module](https://qiskit.org/documentation/stubs/qiskit.transpiler.passes.SabreLayout.html) is used to generate initial mappings. Nonetheless, `/mapper` provides the Qiskit 0.33.0's `SabreLayout` module for reference and use, if needed.
 
 The source code for `SQGMSwap` (written on top of `SabreSwap`) as well as Qiskit 0.33.0's `SabreSwap` module are provided in `/router`. The experiments also used Qiskit 0.39.4's `SabreSwap` module and `NASSCSwap` module, the original implementation of the [NASSC (Not All SWAPs Have the Same Cost)](https://ieeexplore.ieee.org/abstract/document/9773196/?casa_token=XzV4yy5W3D8AAAAA:ioe4xkNhEWtNZyiW0eWFsBf7WGRfpfAY7fBC5hwCRA4nzsTH2OvUG6OChXmQdbo_sU_aNiuc), retrieved from the author's [repository](https://github.com/peiyi1/nassc_code) solely for experimental purposes. [TOQM (Time-Optimal Qubit Mapping)](https://dl.acm.org/doi/10.1145/3445814.3446706) was also used for comparisons; its source code (written in C++) is available on the author's [repository](https://github.com/time-optimal-qmapper/TOQM).
 
