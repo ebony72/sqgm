@@ -1,0 +1,2 @@
+circuit,2qg_in,depth_in,sabre0330_min_2qg_out,sabre0330_min_depth_out,sabre0330_min_2qg_ratio,sabre0330_min_depth_ratio,sabre0330_avg_time,sabre0394_min_2qg_out,sabre0394_min_depth_out,sabre0394_min_2qg_ratio,sabre0394_min_depth_ratio,sabre0394_avg_time,sqgm_min_2qg_out,sqgm_min_depth_out,sqgm_min_2qg_ratio,sqgm_min_depth_ratio,sqgm_avg_time
+example_4q.qasm,4,7,7,15,1.75,2.143,0.0,7,15,1.75,2.143,0.0,7,11,1.75,1.571,0.0

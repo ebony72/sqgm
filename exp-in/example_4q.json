@@ -1,0 +1,23 @@
+{
+    "bench_path": "./benchmark/example_4q/",
+    "bench_filter": "example_4q.qasm",
+    "qasm_path": "./exp-out/qasm/example_4q/",
+    "csv_path": "./exp-out/csv/example_4q.csv",
+    "ag": "ourense",
+    "reps": 1,
+    "objective": "depth",
+    "mode": "best",
+    "rep_splits": [],
+    "base_routers": [
+        "sabre0330",
+        "sabre0394",
+        "sqgm"
+    ],
+    "heuristics": [
+        "lookahead"
+    ],
+    "inc_cc": 0,
+    "inc_naive_h": 0,
+    "exp_qasm": 1,
+    "exp_csv": 1
+}

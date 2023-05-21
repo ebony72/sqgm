@@ -1,0 +1,23 @@
+{
+    "bench_path": "./benchmark/quekno/53Q_depth_Sycamore/",
+    "bench_filter": "53QBT_depth_Sycamore_large",
+    "qasm_path": "./exp_out/qasm/exp5_sycamore/",
+    "csv_path": "./exp_out/csv/exp5_sycamore.csv",
+    "ag": "sycamore53",
+    "reps": 5,
+    "objective": "depth",
+    "mode": "best",
+    "rep_splits": [],
+    "base_routers": [
+        "sabre0330",
+        "sabre0394",
+        "sqgm"
+    ],
+    "heuristics": [
+        "decay"
+    ],
+    "inc_cc": 0,
+    "inc_naive_h": 0,
+    "exp_qasm": 1,
+    "exp_csv": 1
+}

@@ -1,0 +1,11 @@
+﻿circuit,gates_in,depth_in,gates_out,depth_out,gates_ratio,depth_ratio,time
+20QBT_depth_Tokyo_large_opt_10_2.55_no.0,760,93,1019,274,1.340789474,2.946236559,15.99
+20QBT_depth_Tokyo_large_opt_10_2.55_no.1,769,97,985,264,1.280884265,2.721649485,15.86
+20QBT_depth_Tokyo_large_opt_10_2.55_no.2,725,93,903,253,1.245517241,2.720430108,13.41
+20QBT_depth_Tokyo_large_opt_10_2.55_no.3,756,90,998,281,1.32010582,3.122222222,21.71
+20QBT_depth_Tokyo_large_opt_10_2.55_no.4,850,99,1041,245,1.224705882,2.474747475,14.12
+20QBT_depth_Tokyo_large_opt_10_2.55_no.5,795,95,1069,285,1.344654088,3,15.15
+20QBT_depth_Tokyo_large_opt_10_2.55_no.6,864,110,1099,280,1.271990741,2.545454545,14.57
+20QBT_depth_Tokyo_large_opt_10_2.55_no.7,801,95,1044,298,1.303370787,3.136842105,19.77
+20QBT_depth_Tokyo_large_opt_10_2.55_no.8,893,109,1110,291,1.24300112,2.669724771,15.7
+20QBT_depth_Tokyo_large_opt_10_2.55_no.9,837,101,1067,282,1.27479092,2.792079208,14.27

@@ -1,0 +1,17 @@
+{
+    "bench_path": "",
+    "bench_filter": "",
+    "qasm_path": "",
+    "csv_path": "",
+    "ag": "",
+    "reps": 0,
+    "objective": "",
+    "mode": "",
+    "rep_splits": [],
+    "base_routers": [],
+    "heuristics": [],
+    "inc_cc": 0,
+    "inc_naive_h": 0,
+    "exp_qasm": 0,
+    "exp_csv": 0
+}

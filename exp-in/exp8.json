@@ -1,0 +1,24 @@
+{
+    "bench_path": "./benchmark/queko/",
+    "bench_filter": "54QBT_25CYC_QSE",
+    "qasm_path": "./exp_out/qasm/exp8/",
+    "csv_path": "./exp_out/csv/exp8.csv",
+    "ag": "sycamore54",
+    "reps": 5,
+    "objective": "depth",
+    "mode": "best",
+    "rep_splits": [],
+    "base_routers": [
+        "sabre0330",
+        "sabre0394",
+        "sqgm",
+        "nassc"
+    ],
+    "heuristics": [
+        "decay"
+    ],
+    "inc_cc": 1,
+    "inc_naive_h": 0,
+    "exp_qasm": 1,
+    "exp_csv": 1
+}

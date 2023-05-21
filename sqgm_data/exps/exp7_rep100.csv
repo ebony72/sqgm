@@ -1,0 +1,11 @@
+circuit,2qg_in,depth_in,sabre0330_min_2qg_out,sabre0330_min_depth_out,sabre0330_min_2qg_ratio,sabre0330_min_depth_ratio,sabre0330_avg_time,sabre0394_min_2qg_out,sabre0394_min_depth_out,sabre0394_min_2qg_ratio,sabre0394_min_depth_ratio,sabre0394_avg_time,sqgm_min_2qg_out,sqgm_min_depth_out,sqgm_min_2qg_ratio,sqgm_min_depth_ratio,sqgm_avg_time
+20QBT_depth_Tokyo_large_opt_10_2.55_no.0.qasm,229,93,586,275,2.559,2.957,0.31,532,265,2.323,2.849,0.23,622,205,2.716,2.204,0.34
+20QBT_depth_Tokyo_large_opt_10_2.55_no.1.qasm,229,97,532,246,2.323,2.536,0.32,472,216,2.061,2.227,0.23,577,170,2.52,1.753,0.35
+20QBT_depth_Tokyo_large_opt_10_2.55_no.2.qasm,236,93,557,266,2.36,2.86,0.36,551,228,2.335,2.452,0.15,689,197,2.919,2.118,0.32
+20QBT_depth_Tokyo_large_opt_10_2.55_no.3.qasm,227,90,557,280,2.454,3.111,0.36,521,258,2.295,2.867,0.3,674,197,2.969,2.189,0.32
+20QBT_depth_Tokyo_large_opt_10_2.55_no.4.qasm,254,99,551,300,2.169,3.03,0.36,620,295,2.441,2.98,0.18,698,226,2.748,2.283,0.34
+20QBT_depth_Tokyo_large_opt_10_2.55_no.5.qasm,258,95,582,276,2.256,2.905,0.36,570,268,2.209,2.821,0.16,702,202,2.721,2.126,0.44
+20QBT_depth_Tokyo_large_opt_10_2.55_no.6.qasm,274,110,667,304,2.434,2.764,0.43,640,303,2.336,2.755,0.29,781,230,2.85,2.091,0.48
+20QBT_depth_Tokyo_large_opt_10_2.55_no.7.qasm,245,95,626,297,2.555,3.126,0.41,563,260,2.298,2.737,0.28,650,208,2.653,2.189,0.43
+20QBT_depth_Tokyo_large_opt_10_2.55_no.8.qasm,280,109,610,296,2.179,2.716,0.43,601,276,2.146,2.532,0.18,709,232,2.532,2.128,0.47
+20QBT_depth_Tokyo_large_opt_10_2.55_no.9.qasm,238,101,529,292,2.223,2.891,0.42,568,277,2.387,2.743,0.34,676,210,2.84,2.079,0.47

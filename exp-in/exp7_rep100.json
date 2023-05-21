@@ -1,0 +1,23 @@
+{
+    "bench_path": "./benchmark/quekno/20Q_depth_Tokyo/",
+    "bench_filter": "20QBT_depth_Tokyo_large_opt_10_2.55",
+    "qasm_path": "./exp_out/qasm/exp7_rep100/",
+    "csv_path": "./exp_out/csv/exp7_rep100.csv",
+    "ag": "sycamore54",
+    "reps": 100,
+    "objective": "depth",
+    "mode": "best",
+    "rep_splits": [],
+    "base_routers": [
+        "sabre0330",
+        "sabre0394",
+        "sqgm"
+    ],
+    "heuristics": [
+        "decay"
+    ],
+    "inc_cc": 0,
+    "inc_naive_h": 0,
+    "exp_qasm": 1,
+    "exp_csv": 1
+}
