@@ -10,7 +10,7 @@ SQGM (Single-Qubit Gates Matter) promises a simple and effective method that tak
 
 ## Installation
 
-SQGM uses modules from the Qiskit libraries, in particular, [Qiskit Terra](https://github.com/Qiskit/qiskit-terra). Information on installing Qiskit can be found [here](https://qiskit.org/documentation/getting_started.html). The version used for experiments was 0.39.4, the latest version at the time. In addition, the [NetworkX](https://www.osti.gov/biblio/960616) library is used to construct architecture graphs. Information on installing networkx can be found [here](https://networkx.org/documentation/stable/install.html).
+SQGM uses modules from the Qiskit libraries, in particular, [Qiskit Terra](https://github.com/Qiskit/qiskit-terra). Information on installing Qiskit can be found [here](https://qiskit.org/documentation/getting_started.html). The version used for experiments was 0.39.4, the latest version at the time. In addition, the [NetworkX](https://www.osti.gov/biblio/960616) library is used to construct architecture graphs. Information on installing Networkx can be found [here](https://networkx.org/documentation/stable/install.html).
 
 ## Architecture graphs
 
