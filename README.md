@@ -1,6 +1,8 @@
 # SQGM: Optimising Quantum Circuit Depth in Qubit Mapping
 
-This repository provides the source code and reproducible experiments presented in Li et al.'s *Single-Qubit Gates Matter for Optimising Quantum Circuit Depth in Qubit Mapping*.
+This repository provides the source code and reproducible experiments presented in *Single-Qubit Gates Matter for Optimising Quantum Circuit Depth in Qubit Mapping* by Sanjiang Li, Ky Dan Nguyen, Zachary Clare, and Yuan Feng, which was accepted to ICCAD '23.
+
+For enquiries, contact mrlisj@gmail.com (Sanjiang Li) or dan.kynguyen2@outlook.com (Ky Dan Nguyen).
 
 ## Motivation
 
@@ -27,7 +29,7 @@ Note that Google Sycamore was originally designed with 54 qubits, but ended up w
 
 All experiments conducted used Qiskit 0.39.4's `SabreLayout` [module](https://qiskit.org/documentation/stubs/qiskit.transpiler.passes.SabreLayout.html) is used to generate initial mappings. Nonetheless, `/mapper` provides the Qiskit 0.33.0's `SabreLayout` module for reference and use, if needed.
 
-The source code for `SQGMSwap` (written on top of `SabreSwap`) as well as Qiskit 0.33.0's `SabreSwap` module are provided in `/router`. The experiments also used Qiskit 0.39.4's `SabreSwap` module and `NASSCSwap` module, the original implementation of the [NASSC (Not All SWAPs Have the Same Cost)](https://ieeexplore.ieee.org/abstract/document/9773196/?casa_token=XzV4yy5W3D8AAAAA:ioe4xkNhEWtNZyiW0eWFsBf7WGRfpfAY7fBC5hwCRA4nzsTH2OvUG6OChXmQdbo_sU_aNiuc), retrieved from the author's [repository](https://github.com/peiyi1/nassc_code) solely for experimental purposes. [TOQM (Time-Optimal Qubit Mapping)](https://dl.acm.org/doi/10.1145/3445814.3446706) was also used for comparisons; its source code (written in C++) is available on the author's [repository](https://github.com/time-optimal-qmapper/TOQM).
+The source code for `SQGMSwap` (written on top of `SabreSwap`) as well as Qiskit 0.33.0's `SabreSwap` module are provided in `/router`. The experiments also used Qiskit 0.39.4's `SabreSwap` module and `NASSCSwap` module, the original implementation of the [NASSC (Not All SWAPs Have the Same Cost)](https://ieeexplore.ieee.org/abstract/document/9773196/?casa_token=XzV4yy5W3D8AAAAA:ioe4xkNhEWtNZyiW0eWFsBf7WGRfpfAY7fBC5hwCRA4nzsTH2OvUG6OChXmQdbo_sU_aNiuc), retrieved from the author's [repository](https://github.com/peiyi1/nassc_code) solely for experimental purposes. [TOQM (Time-Optimal Qubit Mapping)](https://dl.acm.org/doi/10.1145/3445814.3446706) was also used for comparisons; its source code (written in C++) is available in the author's [repository](https://github.com/time-optimal-qmapper/TOQM).
 
 ## Benchmarks
 
