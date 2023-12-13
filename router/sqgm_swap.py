@@ -81,8 +81,8 @@ class SQGMSwap(TransformationPass):
 
         # Preserve input DAG's name, regs, wire_map, etc. but replace the graph.
         mapped_dag = None
-        if not self.fake_run:  
-            mapped_dag = dag._copy_circuit_metadata()
+        if not self.fake_run:
+            mapped_dag = dag.copy_empty_like()
 
         canonical_register = dag.qregs["q"]
         current_layout = Layout.generate_trivial_layout(canonical_register)
@@ -113,7 +113,7 @@ class SQGMSwap(TransformationPass):
             # Remove as many immediately applicable gates as possible
             for node in front_layer:
 
-                if len(node.qargs) == 2:  
+                if len(node.qargs) == 2:
                     v0, v1 = node.qargs
                     # Accessing layout._v2p directly to avoid overhead from __getitem__ and a
                     # single access isn't feasible because the layout is updated on each iteration

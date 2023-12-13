@@ -3,6 +3,7 @@ import json
 import os
 import sys
 import time
+import qiskit
 
 from collections import defaultdict
 from numpy import Infinity
@@ -13,7 +14,6 @@ from util import ARCHGRAPHS, ROUTERS
 from qiskit import QuantumCircuit
 from qiskit.circuit.library.standard_gates import SwapGate
 from qiskit.converters import circuit_to_dag
-from qiskit.dagcircuit import DAGCircuit
 from qiskit.quantum_info.synthesis.two_qubit_decompose import TwoQubitBasisDecomposer
 from qiskit.transpiler import CouplingMap, PassManager
 from qiskit.transpiler.passes import (
@@ -48,9 +48,7 @@ from qiskit.transpiler.passes import SabreSwap as router_0394   # SABRE39
 from router.sabre0330_swap import SabreSwap as router_0330      # SABRE33
 from router.sqgm_swap import SQGMSwap as router_sqgm            # SQGM
 from router.nassc_swap import NASSCSwap as router_nassc         # NASSC
-
-'''QISKIT VERSION'''
-from qiskit import __qiskit_version__
+from qiskit.transpiler.passes import StochasticSwap as router_stoch
 
 '''CPU COUNT'''
 from qiskit.tools.parallel import CPU_COUNT
@@ -99,7 +97,10 @@ def initialise_routers(coupling_map, base_routers, basis_gates, heuristics, inc_
                     ),
                     approximation_degree=None
                 )
-            
+            elif Router == router_stoch:
+                routers[f"{name}"] = Router(
+                    coupling_map
+                )
             else:
                 routers[f"{name}-{h}"] = Router(
                     coupling_map,
@@ -269,7 +270,10 @@ def run(
     # Initialise passers
     coupling_map = CouplingMap(couplinglist=ARCHGRAPHS[arch_graph].edges())
     coupling_map.make_symmetric()
-    Mapper = SabreLayout(coupling_map)
+    try: # ensuring compatibility with older versions of Qiskit
+        Mapper = SabreLayout(coupling_map, skip_routing=True)
+    except TypeError:
+        Mapper = SabreLayout(coupling_map)
 
     # For NASSCSwap
     basis_gates = ["x", "h", "u", "u1", "u2", "u3", "cx"]
@@ -387,7 +391,8 @@ def run(
                     output_cir[name].append(cir_out)
             i += 1
         
-        except Exception: # If any error is raised during routing, simply re-run
+        except Exception as e: # If any error is raised during routing, simply re-run
+            print(e)
             continue
     
     return routers, num_2qg_in, num_2qg_out, depth_in, depth_out, time_used, input_cir, output_cir, init_cir
@@ -563,7 +568,7 @@ def main(
     print(f"HEURISTICS\t{', '.join(heuristics)}")
     print(f"INC CC?\t\t{'yes' if inc_cc else 'no'}")
     print(f"INC NAIVE H?\t{'yes' if inc_naive_h else 'no'}")
-    print(f"EXP QASM?\t{'yes' if exp_csv else 'no'}")
+    print(f"EXP QASM?\t{'yes' if exp_qasm else 'no'}")
     print(f"EXP CSV?\t{'yes' if exp_csv else 'no'}")
     print("+-----------------------+")
     
@@ -683,8 +688,7 @@ if __name__ == "__main__":
         init_mapping = None
 
     print("+-----------------------+")
-    print(f"Qiskit {__qiskit_version__['qiskit']}")
-    print(f"Qiskit Terra {__qiskit_version__['qiskit-terra']}")
+    print(f"Qiskit {qiskit.__version__}")
     print(f"CPU count: {CPU_COUNT}")
 
     main(

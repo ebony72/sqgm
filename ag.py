@@ -1,5 +1,29 @@
 import networkx as nx
 
+# Line
+def line(n):
+    g = nx.Graph()
+    g.add_nodes_from(list(range(n)))
+    for i in range(n-1):
+        g.add_edge(i, i+1)
+    return g
+
+# Ring
+def ring(n):
+    g = nx.Graph()
+    g.add_nodes_from(list(range(n)))
+    for i in range(n):
+        g.add_edge(i, (i+1) % n)
+    return g
+
+# Star
+def star(n):
+    g = nx.Graph()
+    g.add_nodes_from(list(range(n)))
+    for i in range(1, n):
+        g.add_edge(0, i)
+    return g
+
 # Q-grid
 def qgrid(m,n):
     g = nx.Graph()
